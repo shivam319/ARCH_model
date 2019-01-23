@@ -1,0 +1,16 @@
+# create dataset
+# create a simple white noise with increasing variance
+
+from random import gauss
+from random import seed
+from matplotlib import pyplot
+
+# seed pseudorandom number generator
+seed(1)
+
+# create dataset
+data = [gauss(0, i*0.01) for i in range(0,100)]
+
+# plot
+pyplot.plot(data)
+pyplot.show()
